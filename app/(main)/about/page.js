@@ -32,7 +32,7 @@ const TeamSection = dynamic(() => Promise.resolve(({ teamMembers }) => (
   </div>
 )), { ssr: false });
 
-export default function AboutPage() {
+const ContactPage = () => {
   const router = useRouter();
 
   const teamMembers = [
@@ -101,7 +101,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               At WriteHub, we believe every story deserves to be told and every voice deserves to be heard. 
-              We're building a platform that empowers writers to share their work with the world and connects 
+              We are building a platform that empowers writers to share their work with the world and connects 
               readers with captivating content across countless genres and topics.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
@@ -152,7 +152,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800">Quality Content</h3>
               <p className="text-gray-600">
-                We're committed to maintaining high standards while celebrating diverse voices and writing styles.
+                We are committed to maintaining high standards while celebrating diverse voices and writing styles.
               </p>
             </div>
 
@@ -188,7 +188,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Join Our Community</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Whether you're a writer or a reader, there's a place for you at WriteHub
+            Whether you are a writer or a reader, there is a place for you at WriteHub
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/auth/register" prefetch={true}>
@@ -207,3 +207,4 @@ export default function AboutPage() {
     </div>
   );
 }
+export default ContactPage;
